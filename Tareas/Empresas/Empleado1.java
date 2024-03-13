@@ -101,17 +101,90 @@ class Empleado1 {
     // Retornar cadena con datos
     return anos + " años, " + meses + " meses, " + dias + " días";
   
-  }
-
-
-    public int calcularEdad() {
-        // Cálculo de la edad basado en la fecha de nacimiento, suponiendo que se tenga esa información
-        // Aquí deberías tener una propiedad de fecha de nacimiento y calcular la edad en base a esa fecha
-        return 0; // Implementa este método según tu modelo de datos
     }
 
-    public float calcularPrestaciones() {
-        // Cálculo de las prestaciones según algún criterio
-        return 0.00f; // Implementa este método según tu modelo de datos
+    public int calcularEdad(Fecha fechaNacimiento, Calendar hoy) {
+
+        int edad;
+
+        // Obtener año, mes y día de la fecha de nacimiento
+        int anioNacimiento = fechaNacimiento.getAnio();
+        int mesNacimiento = fechaNacimiento.getMes();
+        int diaNacimiento = fechaNacimiento.getDia();
+
+        // Obtener año, mes y día de la fecha actual
+        int anioActual = hoy.get(Calendar.YEAR);
+        int mesActual = hoy.get(Calendar.MONTH) + 1;
+        int diaActual = hoy.get(Calendar.DAY_OF_MONTH);
+
+        // Calcular edad
+        if (mesActual < mesNacimiento) {
+            edad = anioActual - anioNacimiento - 1;
+        } else if (mesActual == mesNacimiento) {
+            if (diaActual < diaNacimiento) {
+                edad = anioActual - anioNacimiento - 1;
+            } else {
+                edad = anioActual - anioNacimiento;
+            }
+        } else {
+            edad = anioActual - anioNacimiento;
+        }
+
+        return edad;
+
     }
+
+      
+
+    public String calcularAntiguedad(Fecha fechaInicio, Calendar hoy) {
+
+        int anios;
+        int meses;
+        int dias;
+      
+        // Obtener año, mes y día de la fecha de inicio
+        int anioInicio = fechaInicio.getAnio();
+        int mesInicio = fechaInicio.getMes(); 
+        int diaInicio = fechaInicio.getDia();
+      
+        // Obtener año, mes y día de la fecha actual
+        int anioActual = hoy.get(Calendar.YEAR);
+        int mesActual = hoy.get(Calendar.MONTH) + 1;
+        int diaActual = hoy.get(Calendar.DAY_OF_MONTH);
+      
+        // Calcular diferencia de años
+        anios = anioActual - anioInicio;
+      
+        // Calcular diferencia de meses
+        if(mesActual >= mesInicio) {
+          meses = mesActual - mesInicio;
+        } else {
+          anios--;
+          meses = 12 + (mesActual - mesInicio);
+        }
+      
+        // Calcular diferencia de días
+        if(diaActual >= diaInicio) {
+          dias = diaActual - diaInicio;
+        } else {
+          meses--;
+          dias = 30 + (diaActual - diaInicio);
+          
+          if(meses < 0) {
+            anios--;
+            meses = 11;
+          }
+        }
+      
+        return anios + " años, " + meses + " meses, " + dias + " días";
+      
+    }
+      
+
+    public float calcularPrestaciones(float salario) {
+
+        return salario * 0.15f;
+      
+    }
+      
 }
