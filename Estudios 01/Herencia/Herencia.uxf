@@ -1,4 +1,4 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>120</y><w>240</w><h>230</h></coordinates><panel_attributes>&lt;&lt;Alumno&gt;&gt;
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>80</x><y>280</y><w>240</w><h>170</h></coordinates><panel_attributes>&lt;&lt;Alumno&gt;&gt;
 --
 -numControl: String
 -carrera: String
@@ -9,14 +9,20 @@
 /+getCarrera(): String/
 /+setCarrera(carrera: String): void/
 /getStatus(): Char/
-/+set/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>360</x><y>120</y><w>210</w><h>190</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
+/+setStatus(status: Char): void/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>20</y><w>210</w><h>240</h></coordinates><panel_attributes>&lt;&lt;Persona&gt;&gt;
 --
-
+-nombre: String
+-domicilo: String
+-fechaNac: Date
+-numCelular: String
 --
-#Operation(i: int): int
-/+AbstractOperation()/
---
-Responsibilities
--- Resp1
-*-- Resp2*</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+/+getNombre(): String/
+/+setNombre(nombre: String): void/
+/+getDomicilio(): String/
+/+setDomicilio(domicilio: String): void/
+/+getFechaNac(): Date/
+/+setFechaNac(fechaNac: Date): void/
+/+getNumCelular(): String/
+/+setNumCelular(numCelular: String): void/
+/+imprimirDatos(): String/</panel_attributes><additional_attributes></additional_attributes></element></diagram>
