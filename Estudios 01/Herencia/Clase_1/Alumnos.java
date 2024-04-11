@@ -25,4 +25,23 @@ public class Alumnos extends Persona {
     public void setStatus(char status){
         this.status = status;
     }
+
+    public String imprimirDatos() {
+        String cade = "Nombre del alumno: " + getNombre();
+        cade += "\nDomicilio del alumno: " + getDomicilio();
+        cade += "\nCelular: " + getNumCelular();
+        cade += "\nNumero de control: " + numControl;
+        cade += "\nStatus: " + status;
+        // \n sirve para salto de linea
+        return cade;
+    }
+
+    /*
+    public String imprimirDatos() {
+        String cade = "Nombre del alumno: " + getNombre();
+        cade = "Domicilio del alumno: " + domicilio; //La clase ahora tiene acceso al atributo 'domicilio' porque esta declarada como 'protected'
+        domicilio = "XXXXXXX"; // Aun asi, es siempre recomendado de que se modifique el domicilio EN la clase padre
+        return cade;
+    }
+     */
 }

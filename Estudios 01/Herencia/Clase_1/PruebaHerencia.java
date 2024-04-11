@@ -5,5 +5,9 @@ public class PruebaHerencia{
         // crear un objeto de tipo Alumno
         Date fecha = new Date();
         Alumnos Chepe = new Alumnos("Jose Rojas", "ForjaLey", fecha, "983-03-30", "23390144", 'A');
+
+        //accediendo a el nombre apartir de la clase padre
+        System.out.println(Chepe.getNombre());
+        
     }
 }

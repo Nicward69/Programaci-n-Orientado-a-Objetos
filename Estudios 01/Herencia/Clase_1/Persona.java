@@ -1,7 +1,8 @@
 import java.util.Date;
 public class Persona {
     public String nombre;
-    public String domicilio;
+    private String domicilio; 
+    /* private String domicilio;*/ // la palabra protected indica que la variable puede ser accedida desde la clase y las clases que hereden de esta.
     public Date fechaNac;
     public String numCelular;
 
@@ -41,6 +42,15 @@ public class Persona {
 
     }
 
+    public String getNumCelular(){
+        return numCelular;
+
+    }
+
+    public void setNumCelular(String numCelular) {
+        this.numCelular = numCelular;
+    }
+    
     public String imprimirDatos() {
         String cadena = "Nombre: " + nombre;
         cadena += "\nNumero Celular: " + numCelular;
