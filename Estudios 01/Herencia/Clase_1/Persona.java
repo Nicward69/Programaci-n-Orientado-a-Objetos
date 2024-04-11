@@ -5,12 +5,11 @@ public class Persona {
     public Date fechaNac;
     public String numCelular;
 
-    public Persona(String nombre, String domiclio, Date fechaNac, String numCelular){
+    public Persona(String nombre, String domicilio, Date fechaNac, String numCelular) {
         this.nombre = nombre;
         this.domicilio = domicilio;
         this.fechaNac = fechaNac;
         this.numCelular = numCelular;
-        
     }
 
     public String getNombre(){
@@ -27,17 +26,17 @@ public class Persona {
         
     }
 
-    public void setDomicilio() {
+    public void setDomicilio(String domicilio) {
         this.domicilio = domicilio;
-
     }
+
 
     public Date getFechaNac(){
         return fechaNac;
 
     }
 
-    public void setFechaNac() { 
+    public void setFechaNac(Date fechaNac) { 
         this.fechaNac = fechaNac;
 
     }

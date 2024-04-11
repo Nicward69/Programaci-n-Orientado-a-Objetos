@@ -14,7 +14,7 @@ public class Alumnos extends Persona {
         return numControl;
     }
 
-    public void setNumeroControl(){
+    public void setNumeroControl(String numControl){
         this.numControl = numControl;
     }
 
@@ -22,7 +22,7 @@ public class Alumnos extends Persona {
         return status;
     }
 
-    public void setStatus(){
+    public void setStatus(char status){
         this.status = status;
     }
 }
