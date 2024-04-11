@@ -13,17 +13,16 @@ public class Persona {
         
     }
 
-    public getNombre(){
+    public String getNombre(){
         return nombre;
 
     }
 
-    public void setNombre(nombre String){
+    public void setNombre(String nombre) {
         this.nombre = nombre;
-
     }
 
-    public getDomicilio(){
+    public String getDomicilio(){
         return nombre;
         
     }
@@ -33,7 +32,7 @@ public class Persona {
 
     }
 
-    public getFechaNac(){
+    public Date getFechaNac(){
         return fechaNac;
 
     }

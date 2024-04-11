@@ -1,23 +1,24 @@
+import java.util.Date;
+
 public class Alumnos extends Persona {
     private String numControl;
     private char status;
 
-    public Alumno (String nombre, String domiclio, Date fechaNac, String numCelular, String numControl, char status){
-        //llamado al constructor del padre para iniciar la herencia
-        super (nombre, domicilio, numCelular, fechaNac)
+    public Alumnos(String nombre, String domicilio, Date fechaNac, String numCelular, String numControl, char status) {
+        super(nombre, domicilio, fechaNac, numCelular);
         this.numControl = numControl;
         this.status = status;
     }
 
-    public getNumeroControl(){
+    public String getNumeroControl(){
         return numControl;
     }
 
     public void setNumeroControl(){
-        this.numControl = control;
+        this.numControl = numControl;
     }
 
-    public getStatus(){
+    public char getStatus(){
         return status;
     }
 
