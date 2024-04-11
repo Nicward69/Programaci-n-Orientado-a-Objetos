@@ -8,6 +8,8 @@ public class PruebaHerencia{
 
         //accediendo a el nombre apartir de la clase padre
         System.out.println(Chepe.getNombre());
-        
+        System.out.println("***********************************************");
+        //llamando al metodo de clase hija
+
     }
 }

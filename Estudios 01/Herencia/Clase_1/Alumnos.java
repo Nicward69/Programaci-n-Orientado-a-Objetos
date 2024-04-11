@@ -26,10 +26,19 @@ public class Alumnos extends Persona {
         this.status = status;
     }
 
-    public String imprimirDatos() {
+    public String imprimirDatosAlumnos() {
         String cade = "Nombre del alumno: " + getNombre();
         cade += "\nDomicilio del alumno: " + getDomicilio();
         cade += "\nCelular: " + getNumCelular();
+        cade += "\nNumero de control: " + numControl;
+        cade += "\nStatus: " + status;
+        // \n sirve para salto de linea
+        return cade;
+    }
+
+    @Override // Indica que esta funcion sobreescribe a la funcion de la clase padre
+    public String imprimirDatos() {
+        String cade = super.imprimirDatos();
         cade += "\nNumero de control: " + numControl;
         cade += "\nStatus: " + status;
         // \n sirve para salto de linea
